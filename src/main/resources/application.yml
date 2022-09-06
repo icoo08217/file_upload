@@ -19,6 +19,5 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-#custom:
-#  genFileDirPath: c:/temp/app10
-# &allowPublicKeyRetrieval=true&useSSL=false
+custom:
+  genFileDirPath: /Users/bc/Desktop/BC/CODE_LION/spring/temp/app10
