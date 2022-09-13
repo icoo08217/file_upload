@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,16 +17,11 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @SuperBuilder
 @ToString(callSuper = true)
-public class Member {
-
-    private String ID;
-
+public class Member extends BaseEntity {
+    @Column(unique = true)
+    private String username;
     private String password;
-
     private String email;
-
-    // 프로필 이미지
-    private MultipartFile profileImg;
-
+    private String profileImg;
 }
 
