@@ -1,29 +1,29 @@
-<nav class="nav-bar-cell1-rev">
-    <ul>
-        <li>
+<!DOCTYPE html>
+<html layout:decorate="~{layout/layout.html}">
 
-        </li>
-    </ul>
-</nav>
+<head>
+    <title>프로파일</title>
+</head>
 
-<h1>프로파일</h1>
+<body>
+<section layout:fragment="content">
+    <div class="container">
+        <h1>프로파일</h1>
 
-<style>
-    .profile-img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-</style>
+        <style>
+            .profile-img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        </style>
 
-<img class="profile-img" th:src="@{|/gen/${loginedMember.profileImg}|}">
-<div>ID :
-    <span th:text="${loginedMember.username}">
-    </span>
-</div>
+        <img class="profile-img" th:src="@{|/gen/${loginedMember.profileImg}|}">
+        <div>아이디 : <span th:text="${loginedMember.username}"></span></div>
+        <div>이메일 : <span th:text="${loginedMember.email}"></span></div>
+    </div>
 
-<div>E-mail :
-    <span th:text="${loginedMember.email}">
-    </span>
-</div>
+</section>
+</body>
+</html>
