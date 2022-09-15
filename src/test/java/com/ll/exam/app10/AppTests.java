@@ -51,7 +51,7 @@ public class AppTests {
         // 안녕
         resultActions
                 .andExpect(status().is2xxSuccessful())
-                .andExpect(handler().methodName("main"))
+                .andExpect(handler().methodName("showMain"))
                 .andExpect(content().string(containsString("안녕")));
     }
 
