@@ -1,4 +1,4 @@
-package com.ll.exam.app10.app.util;
+package com.ll.exam.app10.util;
 
 import org.apache.tika.Tika;
 import org.springframework.web.client.RestTemplate;
